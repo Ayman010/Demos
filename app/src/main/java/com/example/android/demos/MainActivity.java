@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         }
         getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putBoolean("isFirstRun", false).commit();*/
     }
+
     public void shared (View view){
         Intent shared = new Intent(this,Shared_Preferences.class);
         startActivity(shared);
@@ -36,4 +37,21 @@ public class MainActivity extends AppCompatActivity {
         Intent open =new Intent(this,OpenFile.class);
         startActivity(open);
     }
-}
+    public void upload (View view){
+        Intent upload =new Intent(this,UploadFromGallary.class);
+        startActivity(upload);
+    }
+    public void animation (View view){
+        Intent animate =new Intent(this,Zoom.class);
+        startActivity(animate);
+    }
+    public void camera (View view){
+        Intent camera =new Intent(this,Zoom.class);
+        startActivity(camera);}
+    public void openPDF(){
+        Intent openPdf=new Intent(this,OpenPdfFile.class);
+        startActivity(openPdf);
+    }
+
+
+    }

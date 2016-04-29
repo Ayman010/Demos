@@ -48,4 +48,40 @@
         android:layout_below="@+id/calculator"
         android:layout_centerHorizontal="true"
         android:onClick="openFile"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open Gallary"
+        android:id="@+id/button3"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:onClick="upload"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Animation"
+        android:id="@+id/button4"
+        android:layout_below="@+id/button3"
+        android:layout_centerHorizontal="true"
+        android:onClick="animation"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Camera"
+        android:id="@+id/button5"
+        android:layout_below="@+id/button4"
+        android:layout_centerHorizontal="true"
+        android:onClick="camera"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open PDF"
+        android:id="@+id/button6"
+        android:onClick="openPDF"
+        android:layout_below="@+id/button5"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

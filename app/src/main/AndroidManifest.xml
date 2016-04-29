@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.demos">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-feature android:name="android.hardware.camera" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,7 +23,11 @@
         <activity android:name=".Shared_Preferences" />
         <activity android:name=".ChangeTextSizeBySeekBar" />
         <activity android:name=".Calculator" />
-        <activity android:name=".OpenFile"></activity>
+        <activity android:name=".OpenFile" />
+        <activity android:name=".UploadFromGallary" />
+        <activity android:name=".Zoom" />
+        <activity android:name=".Camera" />
+        <activity android:name=".OpenPdfFile"></activity>
     </application>
 
 </manifest>
