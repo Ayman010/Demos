@@ -1,16 +1,49 @@
 package com.example.android.demos;
 
+import android.annotation.TargetApi;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 public class MainActivity extends AppCompatActivity {
 
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //this code is to get notification
+        Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+        PendingIntent pendingIntent=PendingIntent.getActivity(getApplicationContext(),1,intent,0);
+        Notification notification=new Notification.Builder(getApplicationContext())
+                .setContentTitle("Lunch is ready")
+                .setContentText("It's getting cold...")
+                .setContentIntent(pendingIntent)
+                .setSmallIcon(android.R.drawable.sym_def_app_icon)
+                .build();
+        NotificationManager notificationManager=(NotificationManager)getSystemService(NOTIFICATION_SERVICE);
+        notificationManager.notify(1,notification);
+
+
+
+
+
+
+        //this code to get ads in the bottom of the application and we have to update manifest+gradle build +strings
+        AdView adView=(AdView)findViewById(R.id.adView);
+        AdRequest adRequest =new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
+
+
         /*Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("isFirstRun", true);
 كود لعمل شاشة تظهر عند فتح التطبيق لأول مرة
         if (isFirstRun) {
@@ -48,9 +81,16 @@ public class MainActivity extends AppCompatActivity {
     public void camera (View view){
         Intent camera =new Intent(this,Zoom.class);
         startActivity(camera);}
-    public void openPDF(){
-        Intent openPdf=new Intent(this,OpenPdfFile.class);
-        startActivity(openPdf);
+
+    public void bluetooth(View view){
+        Intent blue =new Intent(this,Bluetooth.class);
+        startActivity(blue);
+    }
+
+
+    public void nextPage(View view){
+        Intent intent = new Intent(this,NextPage.class);
+        startActivity(intent);
     }
 
 

@@ -2,8 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.demos">
 
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <uses-feature android:name="android.hardware.camera" />
 
@@ -27,7 +30,8 @@
         <activity android:name=".UploadFromGallary" />
         <activity android:name=".Zoom" />
         <activity android:name=".Camera" />
-        <activity android:name=".OpenPdfFile"></activity>
+        <activity android:name=".NextPage"></activity>
+        <activity android:name=".Bluetooth"></activity>
     </application>
 
 </manifest>
