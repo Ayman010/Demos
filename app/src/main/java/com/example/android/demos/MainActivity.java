@@ -92,6 +92,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,NextPage.class);
         startActivity(intent);
     }
+    public void internalStorage(View view){
+        Intent intent=new Intent(this, InternalStorage.class);
+        startActivity(intent);
+    }
 
 
     }
