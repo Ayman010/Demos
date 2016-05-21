@@ -36,6 +36,10 @@
         </activity>
         <activity android:name=".DBActivity">
         </activity>
+        <activity android:name=".CacheIE">
+        </activity>
+        <activity android:name=".SqliteDataBase">
+        </activity>
     </application>
 
 </manifest>

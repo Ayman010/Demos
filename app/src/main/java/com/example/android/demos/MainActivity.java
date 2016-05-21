@@ -96,6 +96,15 @@ public class MainActivity extends AppCompatActivity {
         Intent intent=new Intent(this, InternalStorage.class);
         startActivity(intent);
     }
+    public void cacheIE(View view) {
+        Intent intent = new Intent(this, CacheIE.class);
+        startActivity(intent);
+    }
+    public void sqLite(View view){
+        Intent intent= new Intent(this, SqliteDataBase.class);
+        startActivity(intent);
+    }
+
 
 
     }

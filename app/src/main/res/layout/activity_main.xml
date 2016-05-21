@@ -123,4 +123,24 @@
         android:onClick="internalStorage"
         android:layout_alignParentStart="true"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cacheie"
+        android:id="@+id/button12"
+        android:layout_alignTop="@+id/change"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="cacheIE"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SqLite"
+        android:id="@+id/button16"
+        android:layout_below="@+id/change"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="sqLite"/>
+
 </RelativeLayout>
